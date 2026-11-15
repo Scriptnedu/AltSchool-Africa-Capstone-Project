@@ -1,0 +1,36 @@
+variable,type,description,expected_use,missing_pct
+institution_id,Identifier,Unique institution ID,Row key (not a model feature),0.0
+institution_name,Identifier,Institution name; many names repeat across states,Not a model feature,0.0
+state_code,Categorical,Two-letter state code (51 values),Location context,0.0
+state_name,Categorical,State name (matches state_code),Location context,0.0
+county,Categorical,County name (104 distinct; names such as 'Washington County' appear in many states),Location context; verify county-state pairs,0.0
+nces_locale,Categorical,"Locale type, for example Suburban - Large, City - Midsize, Rural - Remote (8 values)",Context / possible feature,0.0
+level,Categorical,"School level: Elementary, Middle, High, K-12 Combined, 2-Year College, 4-Year University",Key segment and feature,0.0
+control,Categorical,"Ownership: Public, Public Charter, Private Non-Profit, Private Religious, Private For-Profit",Opportunity / context feature,0.0
+title_i_status,Categorical,"Title I classification: Schoolwide, Targeted, Not Title I Eligible, Not Applicable",Opportunity / context feature,0.0
+total_enrollment,Numerical,Number of enrolled students,Institutional size,0.0
+number_of_teachers,Numerical,Number of teachers,Staffing,0.0
+student_teacher_ratio,Numerical,Students per teacher,Staffing,0.0
+percent_free_reduced_lunch,Numerical,Share of students receiving free or reduced-price lunch,Socioeconomic indicator,0.0
+racial_white_pct,Numerical,Percent of students who are White,Demographics,0.0
+racial_black_pct,Numerical,Percent of students who are Black,Demographics,0.0
+racial_hispanic_pct,Numerical,Percent of students who are Hispanic,Demographics,0.0
+racial_asian_pct,Numerical,Percent of students who are Asian,Demographics,0.0
+racial_native_pct,Numerical,Percent of students who are Native,Demographics,0.0
+racial_two_or_more_pct,Numerical,Percent of students of two or more races,Demographics,0.0
+special_education_pct,Numerical,Percent of students in special education,Student needs,0.0
+english_learner_pct,Numerical,Percent of students who are English learners,Student needs,0.0
+per_pupil_expenditure_usd,Numerical,Spending per pupil in US dollars,Funding,0.0
+federal_funding_pct,Numerical,Share of funding from federal sources,Funding mix,0.0
+state_funding_pct,Numerical,Share of funding from state sources,Funding mix,0.0
+local_funding_pct,Numerical,Share of funding from local sources,Funding mix,0.0
+math_proficiency_pct,Numerical,Percent of students proficient in mathematics,Academic outcome,0.0
+reading_proficiency_pct,Numerical,Percent of students proficient in reading,Academic outcome,0.0
+graduation_rate_pct,Numerical,Graduation rate (populated for every level; meaning below high school to be confirmed),Academic outcome,0.0
+chronic_absenteeism_pct,Numerical,Percent of students chronically absent,Engagement / outcome,0.0
+avg_sat_score,Numerical,"Average SAT score; missing outside High School, K-12 Combined, 4-Year University",Readiness (structurally missing),67.5
+avg_act_score,Numerical,Average ACT score; same coverage as SAT,Readiness (structurally missing),67.5
+ap_ib_participation_pct,Numerical,AP/IB participation; present only for High School and K-12 Combined,Readiness (structurally missing),71.6
+postsecondary_enrollment_pct,Numerical,Postsecondary enrollment; present only for High School and K-12 Combined,Readiness (structurally missing),71.6
+stem_certified_flag,Categorical (target),Whether the institution is STEM certified (Yes / No); certification definition not given,TARGET,0.0
+broadband_access_pct,Numerical,Percent with broadband access,Technology access,0.0

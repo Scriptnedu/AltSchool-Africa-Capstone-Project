@@ -1,0 +1,29 @@
+model,R_squared,per_pupil_expenditure_usd,percent_free_reduced_lunch,broadband_access_pct,question,test,statistic,p_value,effect_size,p_adjusted
+Spending only,0.083,4.61,,,,,,,,
+Spending + lunch share,0.369,2.54,-8.83,,,,,,,
+Spending + lunch share + broadband,0.369,2.54,-8.72,0.15,,,,,,
+,,,,,"Certification vs Title I status, allowing for level",Likelihood-ratio test,2.08,0.556,n/a,
+,,,,,"Certification vs Title I status, public and charter K-12 only",Chi-square (3 groups),2.63,0.268,Cramer's V = 0.026,
+,,,,,Certification: High School + 4-Year University vs other levels,Bootstrap interval for difference,10.1,,Gap 10.1 points (95% CI 7.7 to 12.5); ratio 1.83,
+,,,,,Certification vs Title I status,Chi-square,3.76,0.288,Cramer's V = 0.027,1.000
+,,,,,Certification vs School level,Chi-square,81.64,< 0.001,Cramer's V = 0.128,< 0.001
+,,,,,Certification vs Ownership,Chi-square,1.89,0.757,Cramer's V = 0.019,1.000
+,,,,,Certification vs Locale type,Chi-square,4.8,0.684,Cramer's V = 0.031,1.000
+,,,,,Certification vs State,Chi-square (shuffle p-value),45.58,0.652,Cramer's V = 0.095,1.000
+,,,,,"Certified vs not certified: Student-teacher ratio (K-12, level-adjusted)",Mann-Whitney U,,0.030,AUC = 0.474 (95% CI 0.451 to 0.496),0.364
+,,,,,"Certified vs not certified: Enrollment (K-12, level-adjusted)",Mann-Whitney U,,0.088,AUC = 0.520 (95% CI 0.497 to 0.544),0.973
+,,,,,"Certified vs not certified: Math proficiency (K-12, level-adjusted)",Mann-Whitney U,,0.213,AUC = 0.485 (95% CI 0.462 to 0.507),1.000
+,,,,,"Certified vs not certified: English-learner share (K-12, level-adjusted)",Mann-Whitney U,,0.307,AUC = 0.512 (95% CI 0.489 to 0.536),1.000
+,,,,,"Certified vs not certified: Chronic absenteeism (K-12, level-adjusted)",Mann-Whitney U,,0.333,AUC = 0.488 (95% CI 0.465 to 0.513),1.000
+,,,,,"Certified vs not certified: Graduation rate (K-12, level-adjusted)",Mann-Whitney U,,0.571,AUC = 0.493 (95% CI 0.472 to 0.518),1.000
+,,,,,"Certified vs not certified: Federal funding share (K-12, level-adjusted)",Mann-Whitney U,,0.598,AUC = 0.494 (95% CI 0.469 to 0.516),1.000
+,,,,,"Certified vs not certified: Special-education share (K-12, level-adjusted)",Mann-Whitney U,,0.609,AUC = 0.494 (95% CI 0.471 to 0.517),1.000
+,,,,,"Certified vs not certified: Reading proficiency (K-12, level-adjusted)",Mann-Whitney U,,0.849,AUC = 0.498 (95% CI 0.475 to 0.520),1.000
+,,,,,"Certified vs not certified: Free/reduced lunch share (K-12, level-adjusted)",Mann-Whitney U,,0.960,AUC = 0.501 (95% CI 0.477 to 0.527),1.000
+,,,,,"Certified vs not certified: Per-pupil spending (K-12, level-adjusted)",Mann-Whitney U,,0.978,AUC = 0.500 (95% CI 0.476 to 0.525),1.000
+,,,,,"Certified vs not certified: Broadband access (K-12, level-adjusted)",Mann-Whitney U,,0.987,AUC = 0.500 (95% CI 0.478 to 0.522),1.000
+,,,,,"Per-pupil spending vs math proficiency, holding lunch share fixed (K-12)",Partial Spearman correlation (bootstrap CI),0.178,,95% CI 0.151 to 0.205,
+,,,,,"Broadband access vs math proficiency, holding lunch share fixed (K-12)",Partial Spearman correlation (bootstrap CI),0.0,,95% CI -0.029 to 0.032,
+,,,,,"Federal funding share vs math proficiency, holding lunch share fixed (K-12)",Partial Spearman correlation (bootstrap CI),-0.006,,95% CI -0.036 to 0.023,
+,,,,,"Student-teacher ratio vs math proficiency, holding lunch share fixed (K-12)",Partial Spearman correlation (bootstrap CI),0.011,,95% CI -0.017 to 0.042,
+,,,,,Ability of school level alone to rank institutions by certification,AUC of level-rate score,0.585,,Baseline for the modelling stage,
