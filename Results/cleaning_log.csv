@@ -1,0 +1,12 @@
+issue,evidence,decision,justification,rows_removed
+"Missing SAT/ACT (3,375 rows) and AP/IB/postsecondary (3,579 rows)",Missing exactly by institution level (0% or 100% per level),Retain as missing,"Measure does not apply to those levels; removing rows leaves 28.4% of data and 2 of 6 levels; imputing invents 13,908 values",0
+No impossible values,"15 validity checks, 0 violations",No correction needed; checks run inside the cleaning function,Nothing to fix; rules protect future reruns,0
+"Values stacked at a limit (broadband 99, reading 98, graduation 99.5, spending $7,500)",0.7% to 4.5% of rows per column,Retain,"Valid numbers, small share; note that true extremes are not visible",0
+Identical funding mix for private non-profit and religious institutions,755 rows all 0 / 2 / 98 percent,Retain,"Not an error, but the funding shares carry no extra information for these owners; interpret within the other 4,245",0
+Free/reduced lunch near zero for colleges,258 of 358 college rows at 0%,Retain,K-12 programme measure; read within K-12 schools,0
+Repeated names,"112 groups share name, state, county and level; best match is 15 of 34 columns",Retain all rows,"Different institutions with generic names, not repeated records",0
+Category labels,No stray spaces or variants; Title I consistent with ownership,"Standardise spacing (no changes needed); keep ""Not Applicable"" as its own category","Genuine category, not a missing value",0
+Outliers,Within-level counts far below all-levels-together counts,Retain,"Plausible values; most were colleges being larger; handle in modelling by scaling, not deletion",0
+Graduation rate present for every level,"About 84% to 90% mean at all levels, including elementary and middle",Retain with caution,Meaning below high school is unclear; confirm with data owner,0
+Need to separate colleges from K-12 and to see which measures exist,358 colleges; 3 coverage patterns,"Add helper columns: institution_group, readiness_coverage",Make later subsetting simple without changing any original value,0
+Target needs a numeric form for later analysis,stem_certified_flag is Yes/No text,"Add is_certified (1 = Yes, 0 = No)",Original column kept; the new column simplifies modelling,0
